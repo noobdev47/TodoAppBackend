@@ -14,6 +14,8 @@ mongoose.connect(process.env.MONGO_CONN_URL)
   console.log(err)
 })
 
+app.use(express.json())
+
 app.listen(process.env.PORT, () => {
   console.log(`Server Listening on port ${process.env.PORT}...`)
 })

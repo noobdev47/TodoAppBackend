@@ -29,7 +29,7 @@ router.get('/:id', async function (req, res) {
 router.delete('/:id', async function (req, res) {
   const {id} = req.params
 
-  await Todo.deleteOne({_id : id})
+  await Todo.findByIdAndDelete(id)
 
   res.status(204).send()
 })
